@@ -1,3 +1,4 @@
+import { blogPosts } from '@/lib/blog';
 import {
   getCategories,
   getCategorySlug,
@@ -42,7 +43,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
   ];
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 
   // Dynamic category and product pages
   const categories = getCategories();
@@ -69,5 +83,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  return [...staticPages, ...blogPages, ...categoryPages, ...productPages];
 }
