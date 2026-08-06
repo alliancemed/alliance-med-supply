@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { contact } from '@/data/contact';
 import { ExternalLink, Mail, MapPin, Phone, Star } from 'lucide-react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -200,6 +201,13 @@ export const Footer = () => {
                 >
                   Terms & Conditions
                 </a>
+                <span aria-hidden="true">|</span>
+                <Link
+                  href="/blog"
+                  className="rounded px-1 py-1 hover:text-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                >
+                  Health Blog
+                </Link>
                 <span aria-hidden="true">|</span>
                 <a
                   href="/sitemap.xml"

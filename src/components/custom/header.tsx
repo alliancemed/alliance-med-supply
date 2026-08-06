@@ -29,6 +29,7 @@ export const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Products', href: '/products' },
+    { name: 'Blog', href: '/blog' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Reviews', href: '/reviews' },
     { name: 'Contact Us', href: '/contact-us' },
@@ -74,7 +75,9 @@ export const Header = () => {
               aria-label="Main navigation"
             >
               {navigation.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== '/' && pathname.startsWith(`${item.href}/`));
                 return (
                   <Link
                     key={item.name}
@@ -177,7 +180,9 @@ export const Header = () => {
           <div className="fixed inset-x-0 top-20 z-[70] overflow-y-auto max-h-[calc(100vh-5rem)] border-t bg-background shadow-xl xl:hidden">
             <div className="space-y-1 py-4">
               {navigation.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== '/' && pathname.startsWith(`${item.href}/`));
                 return (
                   <Link
                     key={item.name}
