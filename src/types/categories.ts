@@ -52,4 +52,5 @@ export type CategoryName =
   | 'CPM Machine'
   | 'Lift Chair'
   | 'PureWick'
+  | 'Bathroom Aids'
   | 'Mattresses';

@@ -9,6 +9,7 @@ import {
   getProductBySlugInCategory,
   getProductSlug,
 } from '@/lib/categories/utils';
+import { img } from '@/lib/images';
 import {
   generateBreadcrumbSchema,
   generateProductSchema,
@@ -71,7 +72,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: product.image,
+          url: img(product.image),
           width: 1200,
           height: 630,
           alt: product.name,
@@ -82,7 +83,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${product.name} | Alliance Medical Supply`,
       description: product.description,
-      images: [product.image],
+      images: [img(product.image)],
     },
   };
 }

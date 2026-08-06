@@ -34,6 +34,12 @@ const useBlob =
  *   // local dev  → '/images/categories/rollator.png'
  */
 export function img(path: string): string {
+  // Assets bundled directly in /public are already rooted at their final URL.
+  // This is useful for new uploads that are not stored in Vercel Blob.
+  if (path.startsWith('/site-assets/')) {
+    return path;
+  }
+
   return useBlob ? `${BLOB_BASE}${path}` : `/images${path}`;
 }
 
