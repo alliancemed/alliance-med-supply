@@ -17,6 +17,7 @@ import {
   CalendarDays,
   CheckCircle2,
   Clock3,
+  ExternalLink,
   MapPin,
   Phone,
   ShieldCheck,
@@ -197,6 +198,29 @@ export default async function BlogArticlePage({ params }: PageProps) {
                 </section>
               ))}
             </div>
+
+            {post.sources && post.sources.length > 0 && (
+              <section className="mt-10 border-t border-slate-200 pt-8">
+                <h2 className="text-lg font-bold text-slate-950">
+                  Sources &amp; further reading
+                </h2>
+                <ul className="mt-3 space-y-2">
+                  {post.sources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 hover:text-teal-900 hover:underline"
+                      >
+                        {source.label}
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             <div className="mt-12 rounded-2xl border-l-4 border-orange-500 bg-orange-50 p-6 sm:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-orange-700">

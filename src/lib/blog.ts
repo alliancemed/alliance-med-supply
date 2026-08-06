@@ -6,6 +6,11 @@ export type BlogSection = {
   bullets?: string[];
 };
 
+export type BlogSource = {
+  label: string;
+  url: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -20,10 +25,101 @@ export type BlogPost = {
   keywords: string[];
   introduction: string;
   sections: BlogSection[];
+  sources?: BlogSource[];
   takeaway: string;
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: 'why-choose-full-electric-hospital-bed',
+    title: 'Why Choose a Full Electric Hospital Bed at Home?',
+    excerpt:
+      'Discover how a full electric hospital bed can support safer transfers, comfortable positioning, caregiver access, and greater independence at home.',
+    category: 'Home Care',
+    publishedAt: '2026-08-06',
+    readingTime: '6 min read',
+    image: img('/hero-section/hero-6.jpg'),
+    imageAlt: 'Full electric hospital bed prepared for comfortable home care',
+    featured: true,
+    keywords: [
+      'full electric hospital bed',
+      'electric hospital bed for home',
+      'hospital bed rental San Jose',
+      'home hospital bed safety',
+      'adjustable hospital bed Bay Area',
+    ],
+    introduction:
+      'When someone needs more positioning support than an ordinary bed can provide, a full electric hospital bed can make home care feel safer, more comfortable, and more manageable. With powered adjustments for the head, knees, and overall bed height, it gives the user and caregiver more control throughout the day.',
+    sections: [
+      {
+        heading: 'What makes a hospital bed “full electric”?',
+        paragraphs: [
+          'A full electric hospital bed uses powered controls to adjust the upper body, knee or foot section, and the height of the entire sleep surface. The exact controls vary by model, but the goal is the same: make common position changes possible without manually cranking the bed.',
+          'That extra height control is the main difference from many semi-electric beds, which commonly power the head and foot sections but use a manual crank for overall bed height.',
+        ],
+      },
+      {
+        heading: '1. Adjustable height can support safer daily routines',
+        paragraphs: [
+          'The ability to raise or lower the entire bed can help match the sleep surface to different activities. A lower position may be more appropriate while resting, while a clinician-recommended height may make certain transfers easier. Caregivers can also raise the bed to a more workable height for personal care, linen changes, and repositioning.',
+          'A powered bed does not prevent falls by itself. Transfer height, mobility aids, supervision, and the surrounding room should be assessed for the individual by the care team.',
+        ],
+      },
+      {
+        heading: '2. More positioning options can improve comfort',
+        paragraphs: [
+          'Powered head and knee adjustments make it easier to find a supportive position for reading, eating, resting, or receiving care. Small adjustments can often be made without the effort and disruption of manually repositioning the entire bed.',
+          'Anyone with breathing, circulation, swallowing, pain, pressure-injury, or post-surgical concerns should follow positioning guidance from a qualified healthcare professional. The bed creates options; the care plan determines how those options should be used.',
+        ],
+      },
+      {
+        heading: '3. Electric controls may support independence',
+        paragraphs: [
+          'For a person who can safely use the hand control, powered adjustments can reduce the need to call a caregiver for every position change. Being able to sit up, recline, or adjust the knees can provide a welcome sense of control during recovery or long-term home care.',
+          'Controls should remain within reach only when the user can operate them safely. Caregivers should learn how to lock controls when the model and care plan call for it.',
+        ],
+      },
+      {
+        heading: '4. A better working height can help caregivers',
+        paragraphs: [
+          'Frequent bending over a low bed can make everyday care more difficult. Raising the sleep surface may improve access for tasks such as changing linens, assisting with hygiene, or following a clinician-taught repositioning routine. The bed should be returned to the recommended safe height when care is complete.',
+        ],
+      },
+      {
+        heading: '5. The right bed system can support a safer setup',
+        paragraphs: [
+          'Safety depends on the complete bed system—not only the powered frame. The mattress, rails, accessories, room layout, electrical connection, and user’s abilities all need to work together. FDA guidance emphasizes assessing entrapment risk, especially for people who are frail, confused, or unable to reposition themselves.',
+          'Use only compatible mattresses and accessories identified for the bed. Bed rails are not automatically the safest choice for every person and should be considered with the healthcare team rather than added as a general fall-prevention measure.',
+        ],
+        bullets: [
+          'Confirm the bed, mattress, rails, and accessories are compatible',
+          'Use a properly grounded outlet and keep cords clear of moving parts',
+          'Lock the casters after the bed is placed',
+          'Learn the controls, emergency procedures, and manual backup features',
+          'Keep enough clear space for transfers and caregiver access',
+        ],
+      },
+      {
+        heading: 'Will insurance cover a full electric hospital bed?',
+        paragraphs: [
+          'Coverage depends on the plan, medical documentation, and exact bed type. Medicare may cover certain medically necessary hospital beds, but CMS currently treats the powered height adjustment on a total or full electric bed as a convenience feature and generally does not cover that model under the DME benefit.',
+          'A semi-electric bed may qualify under specific medical-necessity criteria. Before choosing a bed, ask the insurer and supplier to explain covered alternatives, documentation requirements, rental terms, and expected out-of-pocket costs.',
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: 'FDA — Hospital bed safety and entrapment guidance',
+        url: 'https://www.fda.gov/medical-devices/general-hospital-devices-and-supplies/hospital-beds',
+      },
+      {
+        label: 'CMS — Hospital beds and accessories coverage guidance',
+        url: 'https://www.cms.gov/training-education/medicare-learning-networkr-mln/compliance/medicare-provider-compliance-tips/hospital-beds',
+      },
+    ],
+    takeaway:
+      'A full electric hospital bed can be a strong choice when powered height and positioning adjustments match the user’s care needs. Choose the complete bed system with professional guidance, plan the room carefully, and verify coverage before renting or buying.',
+  },
   {
     slug: 'how-to-choose-the-right-wheelchair',
     title: 'How to Choose the Right Wheelchair for Everyday Comfort',
@@ -34,7 +130,6 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     image: img('/hero-section/hero-1.jpg'),
     imageAlt: 'A modern wheelchair prepared for everyday use',
-    featured: true,
     keywords: [
       'choose a wheelchair',
       'wheelchair rental San Jose',
