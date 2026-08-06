@@ -267,6 +267,20 @@
           "image": "/purewick/purewick.png"
         }
       ]
+    },
+    {
+      "id": 12,
+      "name": "Bathroom Aids",
+      "image": "/site-assets/bathroom-aids/tub-transfer-bench.avif",
+      "description": "Bathing and transfer aids designed to support bathroom safety and independence.",
+      "products": [
+        {
+          "id": 1201,
+          "name": "Tub Transfer Bench",
+          "description": "A stable seated bathing solution that helps users move into and out of the tub with less strain.",
+          "image": "/site-assets/bathroom-aids/tub-transfer-bench.avif"
+        }
+      ]
     }
   ]
 }

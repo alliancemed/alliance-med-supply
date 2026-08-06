@@ -673,6 +673,18 @@ export const categorySEO: Record<
       'PureWick system',
     ],
   },
+  'bathroom-aids': {
+    title: 'Bathroom Aids San Jose | Tub Transfer Benches Bay Area',
+    description:
+      'Rent or purchase bathroom safety equipment in San Jose and the Bay Area. Browse tub transfer benches for safer, more comfortable bathing. Call (408) 942-9000.',
+    keywords: [
+      'bathroom aids San Jose',
+      'tub transfer bench',
+      'bathroom safety equipment',
+      'shower bench Bay Area',
+      'bathroom mobility aids',
+    ],
+  },
 };
 
 // =============================================================================

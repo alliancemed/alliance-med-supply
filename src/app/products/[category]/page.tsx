@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { ProductCategoryPage } from '@/components/custom/ProductCategoryPage';
 import { contact } from '@/data/contact';
 import { getCategoryBySlug, getCategorySlugs } from '@/lib/categories/utils';
+import { img } from '@/lib/images';
 import {
   generateBreadcrumbSchema,
   getCategorySEO,
@@ -56,7 +57,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: `${siteConfig.url}${category.image}`,
+          url: img(category.image),
           width: 1200,
           height: 630,
           alt: `${category.name} - ${contact.businessName}`,
@@ -67,7 +68,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: seoData.title,
       description: seoData.description,
-      images: [`${siteConfig.url}${category.image}`],
+      images: [img(category.image)],
     },
   };
 }
@@ -103,7 +104,7 @@ export default async function CategoryPage({ params }: PageProps) {
           '@type': 'Product',
           name: product.name,
           description: product.description,
-          image: `${siteConfig.url}${product.image}`,
+          image: img(product.image),
           category: category.name,
           brand: {
             '@type': 'Brand',
