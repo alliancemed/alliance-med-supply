@@ -31,6 +31,116 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'bay-area-conference-mobility-plan',
+    title: 'Why Every Bay Area Conference Needs a Mobility Plan',
+    excerpt:
+      'Learn how Bay Area conferences can support attendee mobility with scooters, wheelchairs, transport chairs, power chairs, and accessible planning.',
+    category: 'Event Accessibility',
+    publishedAt: '2026-08-13',
+    readingTime: '7 min read',
+    image: img('/categories/mobility-scooters.png'),
+    imageAlt: 'Mobility scooter for accessible movement at a large venue',
+    featured: true,
+    keywords: [
+      'accessible conference Bay Area',
+      'event mobility equipment rental',
+      'mobility scooter rental for events',
+      'wheelchair rental San Jose',
+      'accessible event planning',
+    ],
+    introduction:
+      'From San Francisco trade shows and San Jose tech conferences to Oakland nonprofit gatherings and community events, every attendee deserves the opportunity to move through the experience with dignity. Large venues, long corridors, crowded expo floors, and full-day schedules can create barriers for people with disabilities, temporary injuries, chronic conditions, or limited endurance. A thoughtful mobility plan helps event teams prepare before those barriers affect someone’s ability to participate. That plan should combine an accessible venue with clear communication, trained staff, and an appropriate mix of mobility scooters, wheelchairs, transport chairs, and power chairs. Mobility should not be treated as a special request at the edge of event planning. It belongs in the same operational conversation as registration, security, transportation, and guest services.',
+    sections: [
+      {
+        heading: 'Mobility belongs in the first planning meeting',
+        paragraphs: [
+          'Accessibility matters at every type of event. A developer conference, healthcare convention, food expo, association meeting, and fundraising gala may attract different audiences, but each can include attendees who need mobility support. Some people use a device every day. Others may be recovering from surgery, managing pain or fatigue, or discovering that the venue is larger than expected.',
+          'The U.S. Department of Justice guidance for accessible meetings recommends considering the complete experience, including the route from parking, drop-off, or public transportation to the entrance, meeting rooms, restrooms, and other event spaces. Room layouts also need enough clear space for people using mobility devices to maneuver.',
+        ],
+      },
+      {
+        heading: 'The venue map is part of the mobility plan',
+        paragraphs: [
+          'An accessible entrance is only the beginning. Event teams should walk the same route an attendee will take: arrival, registration, keynote, breakout rooms, expo floor, food service, restroom, and departure. Carpet, thresholds, steep routes, crowded aisles, elevator queues, and distant rooms can turn a technically accessible venue into an exhausting experience.',
+          'Review the final floor plan after booths, signs, furniture, and queue barriers are placed. An accessible route that exists on an empty diagram can disappear quickly during event setup.',
+        ],
+        bullets: [
+          'Confirm accessible parking, passenger drop-off, and shuttle procedures',
+          'Keep routes, ramps, elevators, doorways, and turning areas unobstructed',
+          'Provide seating and rest points along long travel paths',
+          'Identify secure charging and storage areas for powered devices',
+          'Make registration counters, session seating, and dining areas usable from a mobility device',
+          'Include accessible routes and mobility services in attendee maps and pre-event information',
+        ],
+      },
+      {
+        heading: 'Offer the right mix of mobility equipment',
+        paragraphs: [
+          'No single device works for every attendee. The right inventory depends on the venue, event duration, expected attendance, and requests received during registration. Equipment should be inspected, maintained, and matched to the person’s needs by a qualified provider.',
+        ],
+        bullets: [
+          'Mobility scooters can help qualified users cover long convention-center distances while maintaining independence. Plan for orientation, safe speeds, charging, and storage.',
+          'Manual wheelchairs can support self-propulsion or caregiver assistance, depending on the model and the user’s abilities.',
+          'Transport chairs are lightweight and useful for short assisted trips, but they require a companion or trained staff member to push them.',
+          'Power chairs may support independent mobility for attendees who need powered seating. Arrange them in advance so the controls, dimensions, capacity, and user needs can be confirmed.',
+        ],
+      },
+      {
+        heading: 'Make access easy to request and free from friction',
+        paragraphs: [
+          'Add a clear accessibility question to registration, publish a dedicated contact, and explain how far in advance equipment should be requested. Pre-event requests allow the team to reserve appropriate devices, while a limited same-day inventory can help with needs that arise on site.',
+          'When the event budget allows, offer mobility equipment without an additional attendee fee and treat it as part of event infrastructure. If availability, deposits, identification, or reservations are required, explain the process before attendees arrive. Never promise unlimited inventory, and protect the privacy of people making accommodation requests.',
+          'Equipment availability does not replace an accessible venue or an attendee’s own device. It is one part of a broader plan that gives people practical choices and reduces the burden of asking for help repeatedly.',
+        ],
+      },
+      {
+        heading: 'Train staff and protect the accessible route',
+        paragraphs: [
+          'Registration teams, security staff, volunteers, and venue personnel should all know where equipment is located, who can authorize checkout, how to contact the accessibility lead, and what to do if a device needs service. Establish a simple process for inspection, sanitization, charging, pickup, and return.',
+          'The ADA requires covered public entities and businesses to permit wheelchairs and manually powered mobility aids in areas open to pedestrian use. Policies for other powered mobility devices should be based on legitimate safety requirements and actual risks—not assumptions about people with disabilities. Event-specific procedures should be reviewed with the venue and qualified accessibility or legal professionals.',
+        ],
+        bullets: [
+          'Name one accessibility lead and a backup for every event day',
+          'Train staff to offer assistance respectfully and wait for the attendee’s direction',
+          'Keep signs, cables, furniture, and temporary displays out of accessible routes',
+          'Document charging, cleaning, maintenance, and emergency procedures',
+          'Prepare a backup plan for equipment shortages or breakdowns',
+        ],
+      },
+      {
+        heading: 'A simple plan for Bay Area event teams',
+        paragraphs: [
+          'Start early, ask attendees what they need, and coordinate with the venue and equipment provider before the doors open. A short planning checklist can prevent last-minute confusion and make mobility support visible, dependable, and welcoming.',
+        ],
+        bullets: [
+          'Ask about accommodations during registration and publish an accessibility contact',
+          'Walk every attendee route using the final event floor plan',
+          'Estimate demand and reserve a suitable mix of mobility equipment',
+          'Define delivery, storage, charging, checkout, and return responsibilities',
+          'Train registration, security, venue, and volunteer teams',
+          'Tell attendees what is available and how to request it',
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: 'ADA.gov — Mobility devices',
+        url: 'https://www.ada.gov/topics/mobility-devices/',
+      },
+      {
+        label:
+          'ADA.gov — Wheelchairs, mobility aids, and other power-driven mobility devices',
+        url: 'https://www.ada.gov/resources/opdmds/',
+      },
+      {
+        label: 'U.S. Department of Justice — Accessible meeting planning guide',
+        url: 'https://archive.ada.gov/business/accessiblemtg.htm',
+      },
+    ],
+    takeaway:
+      'A mobility plan is not an add-on. When organizers pair an accessible venue with clear communication, trained staff, and an appropriate mix of mobility equipment, more attendees can participate fully and move through the event with dignity.',
+  },
+  {
     slug: 'why-choose-full-electric-hospital-bed',
     title: 'Why Choose a Full Electric Hospital Bed at Home?',
     excerpt:
@@ -40,7 +150,6 @@ export const blogPosts: BlogPost[] = [
     readingTime: '6 min read',
     image: img('/hero-section/hero-6.jpg'),
     imageAlt: 'Full electric hospital bed prepared for comfortable home care',
-    featured: true,
     keywords: [
       'full electric hospital bed',
       'electric hospital bed for home',
