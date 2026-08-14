@@ -85,12 +85,6 @@
       "description": "Easy, stable mobility for lower leg injuries without using crutches.",
       "products": [
         {
-          "id": 401,
-          "name": "Seated Knee Walker",
-          "description": "Allows seated use for comfort during longer recovery.",
-          "image": "/knee-scooters/seated-knee-walker.png"
-        },
-        {
           "id": 402,
           "name": "Standard Knee Walker",
           "description": "Easy mobility solution for foot or ankle injuries.",
