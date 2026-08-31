@@ -136,7 +136,7 @@ export default function DonationsPage() {
               Medical equipment donations
             </p>
             <h1 className="mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
-              Give useful equipment a second life.
+              WE Accept Donations
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-8 text-slate-700">
               Donate clean, lightly used medical equipment to help make rentals
