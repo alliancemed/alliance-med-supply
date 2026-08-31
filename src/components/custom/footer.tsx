@@ -113,7 +113,6 @@ export const Footer = () => {
                     href={contact.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="View store location on Google Maps (opens in new tab)"
                     className="hover:text-teal-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 rounded"
                   >
                     <p className="font-medium">
@@ -187,7 +186,7 @@ export const Footer = () => {
                 &copy; {new Date().getFullYear()} {contact.businessName}. All
                 rights reserved.
               </p>
-              <div className="mt-1 flex items-center gap-2">
+              <div className="mt-1 flex flex-wrap items-center gap-2">
                 <a
                   href="/privacy-policy"
                   className="rounded px-1 py-1 hover:text-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
@@ -207,6 +206,13 @@ export const Footer = () => {
                   className="rounded px-1 py-1 hover:text-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
                 >
                   Health Blog
+                </Link>
+                <span aria-hidden="true">|</span>
+                <Link
+                  href="/donations"
+                  className="rounded px-1 py-1 hover:text-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+                >
+                  Donations
                 </Link>
                 <span aria-hidden="true">|</span>
                 <a

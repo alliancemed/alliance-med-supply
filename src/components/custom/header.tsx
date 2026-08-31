@@ -30,6 +30,7 @@ export const Header = () => {
     { name: 'Home', href: '/' },
     { name: 'Products', href: '/products' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Donations', href: '/donations' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Reviews', href: '/reviews' },
     { name: 'Contact Us', href: '/contact-us' },
@@ -63,7 +64,7 @@ export const Header = () => {
                 <span className="block text-xl font-semibold text-foreground md:text-2xl">
                   {contact.businessNameShort}
                 </span>
-                <p className="text-xs text-primary uppercase tracking-widest">
+                <p className="text-xs text-teal-700 uppercase tracking-widest">
                   {contact.tagline}
                 </p>
               </div>
@@ -71,7 +72,7 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav
-              className="hidden items-center gap-2 xl:flex"
+              className="hidden items-center gap-1 xl:flex"
               aria-label="Main navigation"
             >
               {navigation.map((item) => {
@@ -83,7 +84,7 @@ export const Header = () => {
                     key={item.name}
                     href={item.href}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`cursor-pointer rounded-md px-5 py-2.5 text-base font-semibold transition-all ${
+                    className={`cursor-pointer rounded-md px-3 py-2.5 text-sm font-semibold transition-all 2xl:px-4 2xl:text-base ${
                       isActive
                         ? 'bg-muted text-primary'
                         : 'text-foreground hover:bg-muted hover:text-primary'
@@ -123,7 +124,7 @@ export const Header = () => {
                   href={contact.accreditationUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${contact.accreditation} – accredited by ${contact.accreditationOrg}`}
+                  aria-label={`${contact.accreditation} - accredited by ${contact.accreditationOrg}`}
                   className="block mt-1 text-right"
                 >
                   <Badge
@@ -167,7 +168,7 @@ export const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Navigation — full-screen overlay drawer (outside header to avoid backdrop-blur containing block) */}
+      {/* Mobile navigation: full-screen overlay drawer outside the header */}
       {isMenuOpen && (
         <>
           {/* Backdrop */}
