@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/rentals/hospital-beds',
+        destination: '/products/electric-hospital-beds-and-mattresses',
+        permanent: true,
+      },
+      {
         source: '/rollator',
         destination: '/products/rollators',
         permanent: true,
