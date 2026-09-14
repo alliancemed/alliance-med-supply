@@ -42,7 +42,7 @@ export function middleware(request: NextRequest) {
       return unauthorized(`The ${appName.toLowerCase()} username or password is incorrect.`);
     }
   } catch {
-    return unauthorized();
+    return unauthorized(`Sign in to open ${appName.toLowerCase()}.`);
   }
 
   return NextResponse.next();
