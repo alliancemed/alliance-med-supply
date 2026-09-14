@@ -3,9 +3,14 @@ import { verifyRecaptcha } from '@/lib/recaptcha';
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN_EMAIL =
   process.env.CONTACT_FORM_ADMIN_EMAIL ?? 'hello@alliancemedsupply.com';
+
+function emailClient() {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) throw new Error('Email delivery is not configured.');
+  return new Resend(apiKey);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -63,6 +68,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Send both emails via Resend using verified domain
+    const resend = emailClient();
     const [confirmationResult, adminResult] = await Promise.all([
       resend.emails.send({
         from: 'Alliance Medical Supply <noreply@alliancemedsupply.com>',
