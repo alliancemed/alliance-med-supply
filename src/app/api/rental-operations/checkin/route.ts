@@ -10,7 +10,10 @@ export async function POST(request: NextRequest) {
     await checkInAsset(barcode, actor);
     return NextResponse.json({ ok: true });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Check-in could not be completed.';
+    const message =
+      error instanceof Error
+        ? error.message
+        : 'Check-in could not be completed.';
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

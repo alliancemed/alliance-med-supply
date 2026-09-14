@@ -1,4 +1,7 @@
-import type { RentalAsset, RentalSnapshot } from '@/lib/rental-operations/types';
+import type {
+  RentalAsset,
+  RentalSnapshot,
+} from '@/lib/rental-operations/types';
 import postgres from 'postgres';
 
 type AssetRow = {
@@ -59,7 +62,11 @@ export async function getRentalSnapshot(): Promise<RentalSnapshot> {
     left join quickbooks_customers c on c.quickbooks_customer_id = ra.quickbooks_customer_id
     order by a.category nulls last, a.product_name, a.ain nulls last
   `;
-  return { source: 'quickbooks', syncedAt: new Date().toISOString(), assets: rows.map(mapAsset) };
+  return {
+    source: 'quickbooks',
+    syncedAt: new Date().toISOString(),
+    assets: rows.map(mapAsset),
+  };
 }
 
 type CheckoutInput = {
@@ -75,12 +82,17 @@ type CheckoutInput = {
 export async function checkOutAsset(input: CheckoutInput) {
   const sql = database();
   return sql.begin(async (transaction) => {
-    const assets = await transaction<{ id: string; ain: string | null; status: string }[]>`
+    const assets = await transaction<
+      { id: string; ain: string | null; status: string }[]
+    >`
       select id, ain, status from rental_assets where barcode = ${input.barcode} for update
     `;
     const asset = assets[0];
     if (!asset) throw new Error('No rental asset matches that barcode.');
-    if (asset.status !== 'available') throw new Error(`${asset.ain ?? input.barcode} is not available for checkout.`);
+    if (asset.status !== 'available')
+      throw new Error(
+        `${asset.ain ?? input.barcode} is not available for checkout.`
+      );
 
     await transaction`
       insert into quickbooks_customers (quickbooks_customer_id, display_name)
@@ -110,7 +122,9 @@ export async function checkOutAsset(input: CheckoutInput) {
 export async function checkInAsset(barcode: string, actor: string) {
   const sql = database();
   return sql.begin(async (transaction) => {
-    const assignments = await transaction<{ asset_id: string; id: string; ain: string | null }[]>`
+    const assignments = await transaction<
+      { asset_id: string; id: string; ain: string | null }[]
+    >`
       select ra.asset_id, ra.id, a.ain
       from rental_assignments ra
       join rental_assets a on a.id = ra.asset_id

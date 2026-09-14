@@ -11,14 +11,13 @@ function unauthorized(message: string) {
 }
 
 export function middleware(request: NextRequest) {
-  const isRentalOperations = request.nextUrl.pathname.startsWith(
-    '/rental-operations'
-  );
+  const isRentalOperations =
+    request.nextUrl.pathname.startsWith('/rental-operations');
   const username = isRentalOperations
-    ? process.env.RENTAL_APP_USERNAME ?? process.env.DELIVERY_APP_USERNAME
+    ? (process.env.RENTAL_APP_USERNAME ?? process.env.DELIVERY_APP_USERNAME)
     : process.env.DELIVERY_APP_USERNAME;
   const password = isRentalOperations
-    ? process.env.RENTAL_APP_PASSWORD ?? process.env.DELIVERY_APP_PASSWORD
+    ? (process.env.RENTAL_APP_PASSWORD ?? process.env.DELIVERY_APP_PASSWORD)
     : process.env.DELIVERY_APP_PASSWORD;
   const appName = isRentalOperations ? 'Rental operations' : 'Delivery planner';
   if (!username || !password) {
@@ -39,7 +38,9 @@ export function middleware(request: NextRequest) {
     const suppliedUsername = decoded.slice(0, separator);
     const suppliedPassword = decoded.slice(separator + 1);
     if (suppliedUsername !== username || suppliedPassword !== password) {
-      return unauthorized(`The ${appName.toLowerCase()} username or password is incorrect.`);
+      return unauthorized(
+        `The ${appName.toLowerCase()} username or password is incorrect.`
+      );
     }
   } catch {
     return unauthorized(`Sign in to open ${appName.toLowerCase()}.`);

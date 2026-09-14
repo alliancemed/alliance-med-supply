@@ -9,7 +9,8 @@ export async function GET() {
       headers: { 'Cache-Control': 'no-store' },
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Rental data is unavailable.';
+    const message =
+      error instanceof Error ? error.message : 'Rental data is unavailable.';
     return NextResponse.json({ error: message }, { status: 503 });
   }
 }
