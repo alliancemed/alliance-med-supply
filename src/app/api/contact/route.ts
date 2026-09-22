@@ -73,6 +73,7 @@ export async function POST(request: NextRequest) {
       resend.emails.send({
         from: 'Alliance Medical Supply <noreply@alliancemedsupply.com>',
         to: ADMIN_EMAIL,
+        replyTo: email,
         subject: `New Contact Form Submission: ${subject}`,
         html: AdminNotificationEmail({
           firstName,
