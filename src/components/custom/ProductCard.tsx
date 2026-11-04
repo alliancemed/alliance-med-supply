@@ -100,6 +100,7 @@ export const ProductCard = ({
               priority={priority}
               className={cn(
                 'object-cover transition-transform duration-500 group-hover:scale-105',
+                data.name === 'Bariatric Bed' && 'object-contain',
                 data.name === 'Bathroom Aids' && 'object-[center_35%]'
               )}
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
