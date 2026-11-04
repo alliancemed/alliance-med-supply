@@ -92,7 +92,7 @@ export const ProductDetailPage = ({
               src={img(product.image)}
               alt={product.name}
               fill
-              className="object-cover"
+              className={product.name === 'Bariatric Bed' ? 'object-contain' : 'object-cover'}
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority
             />
