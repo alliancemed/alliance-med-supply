@@ -86,7 +86,7 @@ export const CtaSection = ({ className }: CtaSectionProps) => {
             </div>
 
             {/* Additional info */}
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-slate-500 whitespace-pre-line">
               {contact.hours.callHours}
             </p>
           </div>

@@ -511,7 +511,7 @@ export default function AboutUsPage() {
                   {contact.phone.display}
                 </PhoneLink>
               </div>
-              <div className="mt-2 text-xs text-text-muted">
+              <div className="mt-2 text-xs text-text-muted whitespace-pre-line">
                 {contact.hours.storeHoursSummary}
               </div>
             </div>
