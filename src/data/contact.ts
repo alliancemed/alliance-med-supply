@@ -98,8 +98,7 @@ export const contact: ContactInfo = {
       saturday: '10:00 AM - 2:00 PM',
       sunday: 'Closed',
     },
-    storeHoursSummary:
-      'Mon-Fri: 10:00 AM - 4:00 PM\nSat: 10:00 AM - 2:00 PM',
+    storeHoursSummary: 'Mon-Fri: 10:00 AM - 4:00 PM\nSat: 10:00 AM - 2:00 PM',
   },
 
   mapsUrl:
