@@ -18,7 +18,7 @@ export type Hours = {
     saturday: string;
     sunday: string;
   };
-  storeHoursSummary: string; // e.g., "Mon-Fri: 11AM-5PM | Sat: Appointments"
+  storeHoursSummary: string; // Weekday and Saturday retail hours
 };
 
 export type SocialLinks = {
@@ -92,13 +92,14 @@ export const contact: ContactInfo = {
   },
 
   hours: {
-    callHours: 'Mon-Fri: 9AM-5PM',
+    callHours: 'Mon-Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 2:00 PM',
     storeHours: {
-      weekdays: '11:00 AM - 5:00 PM',
-      saturday: 'Appointments Only',
+      weekdays: '10:00 AM - 4:00 PM',
+      saturday: '10:00 AM - 2:00 PM',
       sunday: 'Closed',
     },
-    storeHoursSummary: 'Mon-Fri: 11AM-5PM\nSat: Appointments',
+    storeHoursSummary:
+      'Mon-Fri: 10:00 AM - 4:00 PM\nSat: 10:00 AM - 2:00 PM',
   },
 
   mapsUrl:

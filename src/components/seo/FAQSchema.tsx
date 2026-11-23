@@ -19,7 +19,7 @@ const businessFAQs = [
   },
   {
     question: `Where is ${contact.businessName} located?`,
-    answer: `We are located at ${contact.address.full}. Our store hours are ${contact.hours.storeHours.weekdays} Monday through Friday, and by appointment on Saturdays. Call us at ${contact.phone.display} for directions or to schedule a visit.`,
+    answer: `We are located at ${contact.address.full}. Our retail store hours are ${contact.hours.storeHours.weekdays} Monday through Friday and ${contact.hours.storeHours.saturday} on Saturdays. We are closed on Sundays. Call us at ${contact.phone.display} for directions or to schedule a visit.`,
   },
   {
     question: 'Are you accredited?',
