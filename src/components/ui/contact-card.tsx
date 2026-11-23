@@ -131,7 +131,7 @@ function ContactInfo({
           {value}
         </p>
         {hours && (
-          <p className="text-muted-foreground text-xs md:text-sm mt-1">
+          <p className="text-muted-foreground text-xs md:text-sm mt-1 whitespace-pre-line">
             {hours}
           </p>
         )}

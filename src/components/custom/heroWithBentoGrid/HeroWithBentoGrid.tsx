@@ -198,7 +198,7 @@ export const HeroWithBentoGrid = ({
                     <p className="text-sm md:text-md font-medium text-text-primary">
                       Phone Hours
                     </p>
-                    <p className="text-sm md:text-md text-text-muted">
+                    <p className="text-sm md:text-md text-text-muted whitespace-pre-line">
                       {contact.hours.callHours}
                     </p>
                   </div>

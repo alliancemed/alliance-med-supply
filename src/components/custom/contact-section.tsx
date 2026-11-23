@@ -59,7 +59,7 @@ export const ContactSection = () => {
                         {contact.phone.display}
                       </PhoneLink>
                     </p>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-500 mt-1 whitespace-pre-line">
                       {contact.hours.callHours}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ export const ContactSection = () => {
                         {contact.address.city}
                       </a>
                     </p>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-500 mt-1 whitespace-pre-line">
                       {contact.hours.storeHoursSummary}
                     </p>
                   </div>
@@ -100,7 +100,7 @@ export const ContactSection = () => {
                     <h4 className="text-sm font-semibold text-gray-900">
                       Store Hours
                     </h4>
-                    <p className="text-xs text-gray-600">
+                    <p className="text-xs text-gray-600 whitespace-pre-line">
                       {contact.hours.storeHoursSummary}
                     </p>
                   </div>
